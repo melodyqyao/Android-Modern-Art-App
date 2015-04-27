@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="yaoque.androidprojects.modernartui.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <LinearLayout
+            android:id="@+id/left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <yaoque.androidprojects.modernartui.RectAngle
+                android:id="@+id/view_01"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/ripple_material_light" />
+
+            <yaoque.androidprojects.modernartui.RectAngle
+                android:id="@+id/view_02"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/accent_material_dark" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical" >
+
+            <yaoque.androidprojects.modernartui.RectAngle
+                android:id="@+id/view_03"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/accent_material_light" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/black" />
+
+            <yaoque.androidprojects.modernartui.RectAngle
+                android:id="@+id/view_04"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/material_deep_teal_200" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/black" />
+
+            <yaoque.androidprojects.modernartui.RectAngle
+                android:id="@+id/view_05"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/material_blue_grey_800" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/black"
+        android:max="100" />
+
+    
+    </RelativeLayout>
